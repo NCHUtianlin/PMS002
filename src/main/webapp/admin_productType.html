@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员_所有用户界面</title>
+</head>
+<body>
+<table id="admin_productType"></table>
+<div id="admin_productType_manager_tool" style="padding:5px">
+	<div>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="admin_productType_manager_tools.add();">添加</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="admin_productType_manager_tools.update();">修改</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="admin_productType_manager_tools.refresh();">刷新</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true"  onclick="admin_productType_manager_tools.redo();">撤销选中</a>
+	</div>
+	<div style="padding:0 0 0 7px;color:#333">
+        <input type="text"id="admin_productType_search" name="admin_productType_search" class="textbox" style="width:150px">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="admin_productType_manager_tools.search();">查询</a>
+	</div>
+</div>
+
+<form id="admin_productType_add" >
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">类型名称: <input type="text" id="admin_productType_productTypeName_add" name="admin_productType_productTypeName_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">硬件版本: <input type="text" id="admin_productType_hardwareVersion_add" name="admin_productType_hardwareVersion_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">软件版本:<input type="text"id="admin_productType_softwareVersion_add" name="admin_productType_softwareVersion_add"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">mac数量:  <input type="text" id="admin_productType_macNumber_add" name="admin_productType_macNumber_add"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+</form>
+
+<form id="admin_productType_update" >
+	 <p hidden style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">设备编号:<input type="text" id="admin_productType_id_update" name="admin_productType_id_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">类型名称:<input type="text" id="admin_productType_productTypeName_update" name="admin_productType_productTypeName_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">硬件版本:<input type="text" id="admin_productType_hardwareVersion_update" name="admin_productType_hardwareVersion_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">软件版本:<input type="text" id="admin_productType_softwareVersion_update" name="admin_productType_softwareVersion_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">mac数量:<input type="text"  id="admin_productType_macNumber_update" name="admin_productType_macNumber_update"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">可用状态:<select id="admin_productType_productTypeState_update" type="text" name="productTypeState_update"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;">
+     		<option value="0">不可用</option>
+     		<option value="1">可用</option>
+     	</select>
+     </p>
+	
+</form>
+<script type="text/javascript" src="HtcJs/admin_productType.js"></script>
+</body>
+</html>

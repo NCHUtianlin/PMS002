@@ -1,0 +1,20 @@
+#login{
+	
+}
+p{
+	font-size: 28px;
+	height: 36px;
+	line-height: 36px;
+	margin:100px 150px;
+}
+input{
+	width:320px;
+}
+#btn{
+	text-align: center;
+}
+.easyui-linkbutton{
+	padding: 0 20px;
+	font-size:28px;
+	text-align:center;
+}

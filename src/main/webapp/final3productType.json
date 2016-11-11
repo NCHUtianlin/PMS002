@@ -1,0 +1,29 @@
+[
+    {
+        "deviceID":"1",
+        "productTypeID":"a1",
+        "productTypeName":"门铃1.1.1-1.2.2",
+        "hardwareVersion":"1.1.1",
+        "softwareVersion":"1.2.2",
+        "macNumber":"1",
+        "productTypeState":"1"
+    },
+	 {
+        "deviceID":"2",
+        "productTypeID":"a1",
+        "productTypeName":"门铃2.1.1-1.2.2",
+        "hardwareVersion":"1.1.1",
+        "softwareVersion":"1.2.2",
+        "macNumber":"1",
+        "productTypeState":"1"
+    },
+	 {
+        "deviceID":"1",
+        "productTypeID":"a1",
+        "productTypeName":"门锁1.1.1-1.1.1",
+        "hardwareVersion":"1.1.1",
+        "softwareVersion":"1.1.1",
+        "macNumber":"3",
+        "productTypeState":"1"
+    }
+]

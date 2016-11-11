@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员_所有产品界面</title>
+</head>
+<body>
+<table id="admin_allProducts"></table>
+<div id="admin_allProducts_manager_tool" style="padding:5px">
+	<div>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="admin_allProducts_manager_tools.update();">修改</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="admin_allProducts_manager_tools.refresh();">刷新</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true"  onclick="admin_allProducts_manager_tools.redo();">撤销选中</a>
+	</div>
+	<div style="padding:0 0 0 7px;color:#333">
+		查询：<input type="text" id="admin_allProducts_search" name="admin_allProducts_search" class="textbox" style="width:110px">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="admin_allProducts_manager_tools.search();">查询</a>
+	</div>
+</div>
+
+
+
+<form id="admin_allProducts_update" >
+ 	 <p hidden style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">_id:  <input type="text" id="admin_allProducts_id_update" name="admin_allProducts_id_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">deviceID:    <input type="text" id="admin_allProducts_deviceID_update" name="admin_allProducts_deviceID_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">mac:         <input type="text" id="admin_allProducts_MAC_update" name="admin_allProducts_MAC_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">产品名称:    <input type="text" id="admin_allProducts_productTypeName_update" name="admin_allProducts_productTypeName_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产批次:    <input type="text" id="admin_allProducts_productBatch_update" name="admin_allProducts_productBatch_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产商:      <input type="text" id="admin_allProducts_producer_update" name="admin_allProducts_producer_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">产品完成时间:<input type="text" id="admin_allProducts_productEndDate_update" name="admin_allProducts_productEndDate_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">测试结果:    
+	 	<select id="admin_allProducts_testResult_update" name="admin_allProducts_testResult_update"  style="height:28px;line-height: 28px;margin: 10px 5px;">
+	 		<option value="0">失败</option>
+	 		<option value="1">成功</option>		
+	 	</select>
+	 </p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">产品状态:    
+	 		<select id="admin_allProducts_productState_update" name="admin_allProducts_productState_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;">
+		 		<option value="-1">&nbsp;</option>
+		 		<option value="0">失败</option>
+		 		<option value="1">成功</option>
+		 		<option value="2">待定</option>
+		 		<option value="3">废弃</option>
+		 	</select>
+	 </p>
+</form>
+<script type="text/javascript" src="HtcJs/admin_allProducts.js"></script>
+</body>
+</html>

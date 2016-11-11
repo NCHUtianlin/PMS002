@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<title>管理员主页面</title>
+	<meta charset="utf-8">
+<head>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="HtcCss/admin_main_desktop.css">
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'north',split:false" style="height:70px;background:#eee">
+		<div class="log"><a href="http://www.rbcloudtech.com/index.html">虹云网络</a></div>
+		<div class='logout'>您好，<span id='name'></span>|<a href="#" onClick="admin_getout();">退出系统</a></div>
+	</div>   
+    <div data-options="region:'south',title:'footer',split:false,noheader:true" style="height:38px;text-align:center;padding:10px;">虹云网络科技有限公司</div>    
+    <div data-options="region:'west',title:'功能导航',split:false" style="width:160px;">
+    	<ul class="easyui-tree">
+    		<li>
+    			<span>生产管理系统</span>
+    			<ul>
+    				<li><span><div onclick="addTabs_myAccount('我的账户', '')">我的账户</div></span></li>
+    				<li>
+    					<span><div onclick="addTabs_allUsers('所有用户', '')">用户管理</div></span>
+    						<ul>
+    							<li><span><div onclick="addTabs_allUsers('所有用户', '')">所有用户</div></span></li>
+    						</ul>
+    				</li>
+    				<li>
+    					<span><div onclick="addTabs_allApply('所有申报', '')">申报管理</div></span>
+    					<ul>
+    						<li><span><div onclick="addTabs_allApply('所有申报', '')">所有申报</div></span></li>
+    						<li><span><div onclick="addTabs_admin_myApply('我的申报', '')">我的申报</div></span></li>
+    					</ul>
+    				</li>	
+					<li>
+    					<span><div onclick="addTabs_admin_productType('所有产品类型', '')">产品类型管理</div></span>
+    					<ul>
+    						<li><span><div onclick="addTabs_admin_productType('所有产品类型', '')">所有产品类型</div></span></li>	
+    					</ul>
+    				</li>
+    				<li>
+    					<span><div onclick="addTabs_allProducts('所有产品', '')">产品管理</div></span>
+    					<ul>
+    						<li><span><div onclick="addTabs_allProducts('所有产品', '')">所有产品</div></span></li>
+    					</ul>
+    				</li>
+    				<li>
+    					<span>数据统计</span>
+    					<ul>
+    						<li><span><div onclick="addTabs_Batch('生产批次统计', '')">生产批次统计</div></span></li>
+    						<li><span><div onclick="addTabs_productType('产品类型统计', '')">产品类型统计</div></span></li>
+    						<li><span><div onclick="addTabs_shengchanshang('生产商统计', '')">生产商统计</div></span></li>
+    					</ul>
+    				</li>
+    				<li>
+    					<span><div onclick="addTabs_shengchanwancheng('查看生产完成信息', '')">产品生产监督</div></span>
+    					<ul>
+	    					<li><span><div onclick="addTabs_shengchanwancheng('查看生产完成信息', '')">生产完成信息</div></span></li>
+                            <li><span><div onclick="addTabs_test('测试信息', '')">测试信息</div></span></li>
+    					</ul>
+    				</li>
+    				<li>
+    					<span><div onclick="addTabs_toExport('信息导出', '')">信息导出</div></span>
+    				</li>
+    			</ul>
+    		</li>
+    	</ul>
+    </div>
+
+	<div data-options="region:'center',title:'桌面',noheader:true,split:false"
+		style="padding:0 0;background:#eee;">
+		<div id="tabs">
+			<div title="初始界面" style="padding:0 0;display:block;">
+				<h1>管理员主界面</h1>
+				
+			</div>
+		</div>
+	</div>
+</body>
+    
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.params.js"></script>
+	<script type="text/javascript" src="easyui/locale/easyui-lang-zh_CN.js"></script> 
+	<script type="text/javascript" src="HtcJs/admin_main_desktop.js"></script>
+</html>

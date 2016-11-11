@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员_所有用户界面</title>
+</head>
+<body>
+<table id="admin_alluser"></table>
+<div id="admin_alluser_manager_tool" style="padding:5px">
+	<div>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="admin_alluser_manager_tools.add();">添加</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="admin_alluser_manager_tools.remove();">删除</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="admin_alluser_manager_tools.update();">修改</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="admin_alluser_manager_tools.refresh();">刷新</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true"  onclick="admin_alluser_manager_tools.redo();">撤销选中</a>
+	</div>
+	<div style="padding:0 0 0 7px;color:#333">
+        <input type="text" id="admin_alluser_search" name="admin_alluser_search" class="textbox" style="width:150px">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="admin_alluser_manager_tools.search();">查询</a>
+	</div>
+</div>
+
+<form id="admin_alluser_user_add" >
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">姓名:<input type="text" id="admin_alluser_name_add" name="admin_alluser_name_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">密码:<input type="text" id="admin_alluser_password_add" name="admin_alluser_password_add" value="123456" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">邮箱:<input type="text" id="admin_alluser_email_add" name="admin_alluser_email_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">电话:<input type="text" id="admin_alluser_phone_add" name="admin_alluser_phone_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">权限:<select id="admin_alluser_authority_add"  name="admin_alluser_authority_add" style="height:28px;line-height: 28px;margin: 10px 5px;margin: 10px 5px;">
+                <option value="0">普通用户</option>
+                <option value="1">管理员</option>
+            </select> 
+     </p>
+</form>
+
+<form id="admin_alluser_user_update" >
+	 <p hidden style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">id:	<input type="text" id="admin_alluser_userID_update" name="admin_alluser_userID_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">姓名:			<input type="text" id="admin_alluser_name_update" name="admin_alluser_name_update"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p hidden style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">密码:	<input type="text" id="admin_alluser_password_update" name="admin_alluser_password_update" class="textbox" value='123456' style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">邮箱:			<input type="text" id="admin_alluser_email_update" name="admin_alluser_email_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">电话:			<input type="text" id="admin_alluser_phone_update" name="admin_alluser_phone_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p  style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">权限:			<select  id="admin_alluser_authority_update" name="admin_alluser_authority_update" style="height:28px;line-height: 28px;margin: 10px 5px;margin: 10px 5px;">
+                <option value="0">普通用户</option>   
+                <option value="1">管理员</option>    
+            </select> 
+     </p>
+	 <p  style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:30px auto;">工作状态:    <select id="admin_alluser_workState_update" name="admin_alluser_workState_update" style="height:28px;line-height: 28px;margin: 10px 5px;margin: 10px 5px;">
+                <option value="0">离职</option>   
+                <option value="1">在职</option>    
+            </select> 
+     </p>
+</form>
+<script type="text/javascript" src="HtcJs/admin_allUsers.js"></script>
+</body>
+</html>
+

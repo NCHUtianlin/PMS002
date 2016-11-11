@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员_生产完成信息界面</title>
+</head>
+<body>
+<table id="admin_productionAnswer"></table>
+<div id="admin_productionAnswer_manager_tool" style="padding:5px">
+	<div>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="admin_productionAnswer_manager_tools.add();">添加</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="admin_productionAnswer_manager_tools.update();">修改</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="admin_productionAnswer_manager_tools.refresh();">刷新</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true"  onclick="admin_productionAnswer_manager_tools.redo();">撤销选中</a>
+	</div>
+	<div style="padding:0 0 0 7px;color:#333">
+		
+		创建时间：<input type="text" id="admin_productionAnswer_date_from" name="admin_productionAnswer_date_from" class="textbox"  style="width:110px">
+		结束时间：<input type="text" id="admin_productionAnswer_date_to" name="admin_productionAnswer_date_to" class="textbox"  style="width:110px">
+        <input type="text" id="admin_productionAnswer_search" name="admin_productionAnswer_search" class="textbox" style="width:150px">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="admin_productionAnswer_manager_tools.search();">查询</a>
+	</div>
+</div>
+
+<form id="admin_productionAnswer_add" >
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产批次:<input type="text" id="admin_productionAnswer_productBatch_add"  name="admin_productionAnswer_productBatch_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产开始时间:<input type="text" id="admin_productionAnswer_productStartDate_add" name="admin_productionAnswer_productStartDate_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产完成时间:<input type="text" id="admin_productionAnswer_productEndDate_add" name="admin_productionAnswer_productEndDate_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产产品总数:<input type="text" id="admin_productionAnswer_productTotalQuantity_add" name="admin_productionAnswer_productTotalQuantity_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">合格数量:<input type="text" id="admin_productionAnswer_productUsableNumber_add" name="admin_productionAnswer_productUsableNumber_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p  style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">逾期与否:<select id="admin_productionAnswer_productOverDue_add"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;">
+	 		<option value="0">逾期</option>
+	 		<option value="1">未逾期</option>
+	 	</select>
+	 </p>
+      <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">逾期说明:<input type="text" id="admin_productionAnswer_productOverdueExplain_add" name="admin_productionAnswer_productOverdueExplain_add"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+</form>
+
+<form id="admin_productionAnswer_update" >
+     <p hidden style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">noteID:<input type="text" id="admin_productionAnswer_noteID_update" name="admin_productionAnswer_noteID_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产批次:<input type="text" id="admin_productionAnswer_productBatch_update" name="admin_productionAnswer_productBatch_update"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产开始时间:<input type="text" id="admin_productionAnswer_productStartDate_update" name="admin_productionAnswer_productStartDate_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产完成时间:<input type="text" id="admin_productionAnswer_productEndDate_update" name="admin_productionAnswer_productEndDate_update" class="textbox" value='123456' style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产产品总数:<input type="text" id="admin_productionAnswer_productTotalQuantity_update" name="admin_productionAnswer_productTotalQuantity_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">合格数量:<input type="text" id="admin_productionAnswer_productUsableNumber_update" name="admin_productionAnswer_productUsableNumber_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p  style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">逾期与否:<select  id="admin_productionAnswer_productOverDue_update" name="admin_productionAnswer_productOverDue_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;">
+	 	<option value="0">逾期</option>
+	 	<option value="1">未逾期</option>
+	 </select>
+	 </p>
+      <p  style="font-size: 18px;width:340px;height: 18px;line-height: 18px;margin:20px auto;">逾期说明:<input type="text" id="admin_productionAnswer_productOverdueExplain_update" name="admin_productionAnswer_productOverdueExplain_update"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+</form>
+<script type="text/javascript" src="HtcJs/admin_productionAnswer.js"></script>
+</body>
+</html>

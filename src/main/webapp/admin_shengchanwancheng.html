@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员_生产完成信息界面</title>
+</head>
+<body>
+<table id="admin_shengchanwancheng"></table>
+<div id="admin_shengchanwancheng_manager_tool" style="padding:5px">
+	<div>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="admin_shengchanwancheng_manager_tools.add();">添加</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="admin_shengchanwancheng_manager_tools.update();">修改</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="admin_shengchanwancheng_manager_tools.refresh();">刷新</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true"  onclick="admin_shengchanwancheng_manager_tools.redo();">撤销选中</a>
+	</div>
+	<div style="padding:0 0 0 7px;color:#333">
+		
+		创建时间：<input type="text" name="admin_shengchanwancheng_date_from" class="easyui-datebox" editable="false" style="width:110px">
+		结束时间：<input type="text" name="admin_shengchanwancheng_date_to" class="easyui-datebox" editable="false" style="width:110px">
+        <input type="text" name="admin_shengchanwancheng_search" class="textbox" style="width:150px">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="admin_shengchanwancheng_manager_tools.search();">查询</a>
+	</div>
+</div>
+
+<form id="admin_shengchanwancheng_add" >
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产批次:<input type="text"  name="productBatch_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产开始时间:<input type="text" name="productStartDate_add" class="easyui-datebox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产完成时间:<input type="text" name="productEndDate_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产产品总数:<input type="text" name="productTotalQuantity_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">合格数量:<input type="text" name="productUsableNumber_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p  style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">逾期与否:<select id="productOverdue_add" type="text" name="productOverdue_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;">
+	 	<option value="0">逾期</option>
+	 	<option value="1">未逾期</option>
+	 	</select>
+	 </p>
+      <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">逾期说明:<input type="text" name="productOverdueExplain_add"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+</form>
+
+<form id="admin_shengchanwancheng_update" >
+      <p hidden style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">noteID:<input type="text" name="noteID_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产批次:<input type="text" name="productBatch_update" readonly=true class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产开始时间:<input type="text" name="productStartDate_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产完成时间:<input type="text" name="productEndDate_update" class="textbox" value='123456' style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">实际生产产品总数:<input type="text" name="productTotalQuantity_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">合格数量:<input type="text" name="productUsableNumber_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p  style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">逾期与否:<select  id="productOverdue_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;">
+	 	<option value="0">逾期</option>
+	 	<option value="1">未逾期</option>
+	 	</select>
+	 </p>
+      <p  style="font-size: 18px;width:340px;height: 18px;line-height: 18px;margin:20px auto;">逾期说明:<input type="text" name="productOverdueExplain_update"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+</form>
+<script type="text/javascript" src="HtcJs/admin_shengchanwancheng.js"></script>
+</body>
+</html>

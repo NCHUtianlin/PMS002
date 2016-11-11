@@ -1,0 +1,14 @@
+[
+    {
+        "noteID":"",
+        "productTypeName":"",
+        "productBatch":"",
+        "productStartDate":"",
+        "productEndDate":"",
+        "productTotalQuantity":"",
+        "productUsableNumber":"",
+        "productOverdue":"",
+        "productOverdueExplain":"",
+        "notePerson":""
+    }
+]

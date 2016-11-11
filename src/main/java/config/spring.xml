@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+          xmlns:context="http://www.springframework.org/schema/context"  
+          xmlns:mongo="http://www.springframework.org/schema/data/mongo"  
+          xsi:schemaLocation="http://www.springframework.org/schema/context   
+          http://www.springframework.org/schema/context/spring-context-3.0.xsd   
+          http://www.springframework.org/schema/data/mongo   
+          http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd   
+          http://www.springframework.org/schema/beans   
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+      
+
+    <context:component-scan base-package="service" />
+  
+     
+      
+    <import resource="classpath*:config/mongodb.xml"/>
+    
+     
+  	<bean id="basicImplementService" class="service.interfaceService.BasicImplementService">
+  		<property name="dao" >
+  			<ref bean="userDao"/>
+  		</property>
+  	</bean>
+  	<bean id="productDataService" class="service.basicService.requestService.ProductDataService">
+  		<property name="dao" >
+  			<ref bean="productDataDao"/>
+  		</property>
+  	</bean>
+    <bean id="productNoteService" class="service.basicService.requestService.ProductNoteService">
+  		<property name="dao" >
+  			<ref bean="productNoteDao"/>
+  		</property>
+  	</bean>   
+    <bean id="productService" class="service.basicService.requestService.ProductService">
+  		<property name="dao" >
+  			<ref bean="productDao"/>
+  		</property>
+  		<property name="sDao" >
+  			<ref bean="analysisDao"/>
+  		</property>
+  	</bean>
+  	<bean id="reportService" class="service.basicService.requestService.ReportService">
+  		<property name="dao" >
+  			<ref bean="reportDao"/>
+  		</property>
+  	</bean>
+  	<bean id="userService" class="service.basicService.requestService.UserService">
+  		<property name="dao" >
+  			<ref bean="userDao"/>
+  		</property>
+  	</bean>
+  	<bean id="macService" class="service.basicService.requestService.MacService">
+  		<property name="dao" >
+  			<ref bean="macDao"/>
+  		</property>
+  	</bean>
+  	<bean id="operProductData" class="service.basicService.internal.OperProductData">
+  		<property name="dao" >
+  			<ref bean="productDao"/>
+  		</property>
+  	</bean>
+  	<bean id="exportExcelService" class="service.basicService.requestService.ExportExcelService">
+  		<property name="dao" >
+  			<ref bean="userDao"/>
+  		</property>
+  	</bean>
+    
+    
+</beans>

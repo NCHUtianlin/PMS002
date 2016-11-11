@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<title>测试</title>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<script type="text/javascript"  src="http://10.70.12.219:8080/PMS002/js/jquery-1.11.1.js" ></script>
+	<script type="text/javascript" src="http://10.70.12.219:8080/PMS002/js/user.js"></script>
+	<script type="text/javascript" src="http://10.70.12.219:8080/PMS002/js/report.js"></script>
+	<script type="text/javascript" src="http://10.70.12.219:8080/PMS002/js/testdata.js"></script>
+	<script type="text/javascript" src="http://10.70.12.219:8080/PMS002/js/productType.js"></script>
+	<script type="text/javascript" src="http://10.70.12.219:8080/PMS002/js/note.js"></script>
+	<script type="text/javascript" src="http://10.70.12.219:8080/PMS002/js/product.js"></script>
+	<script type="text/javascript" src="http://10.70.12.219:8080/PMS002/js/analysis.js"></script>
+	<script type="text/javascript" src="http://10.70.12.219:8080/PMS002/js/down.js"></script>
+	
+</head>
+ <body>
+    <h1>JSON测试</h1>
+     
+    
+    <!--
+    	姓名：<input type="text" name="name" />
+    	手机号码：<input type="text" name="phone" />
+    	密码：<input type="text" name="password" />
+    	邮箱：<input type="text" name="email" />
+    	权限：<input type="text" name="authority" />
+    	 -->
+    	<h2>POST</h2>
+    	<input type="button" onclick="adduser()" value="user" />
+    	<input type="button" onclick="addreport()" value="report" />
+    	<input type="button" onclick="addPtype()" value="productType" />
+    	<input type="button" onclick="addNote()" value="note" />
+    	<hr/>
+    	<h2>PUT</h2>
+    	<input type="button" onclick="putuser()" value="user" />
+    	<input type="button" onclick="putreport()" value="report" />
+    	<input type="button" onclick="putproduct()" value="product" />
+    	<input type="button" onclick="putPtype()" value="productType" />
+    	<input type="button" onclick="putNote()" value="note" />
+    	<hr/>
+    	<h2>GET</h2>
+    	<input type="button" onclick="getuser()" value="user" />
+    	<input type="button" onclick="getreport()" value="report" />
+    	<input type="button" onclick="gettest()" value="testData" />
+    	<input type="button" onclick="getproduct()" value="product" />
+    	<input type="button" onclick="getPtype()" value="productType" />
+    	<input type="button" onclick="getNote()" value="note" />
+    	<hr/>
+    	<h2>DELETE</h2>
+    	<input type="button" onclick="deleteuser()" value="user" />
+    	
+    	<h2>统计</h2>
+    	<input type="button" onclick="analysis1()" value="统计" />
+    	
+    	<h2>DOWNLOAD</h2>
+    	<form id="exportForm" method="post">
+    	<input type="text" name="productBatch" value="20161109151359013" />
+    	<input type="button" onclick="down('Users')" value="导出用户信息" />
+    	<input type="button" onclick="down('Products')" value="导出产品信息" />
+    	<input type="hidden" name="userName" value="18270892003" />
+    	<input type="hidden" name="hashedPassword" value="123456" />
+    	</form>
+  </body>
+</html>

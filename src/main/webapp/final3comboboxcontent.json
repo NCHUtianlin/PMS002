@@ -1,0 +1,26 @@
+[
+	{
+		"productTypeID":1,
+		"productTypeName":"张三",
+		"email":"zhangsan@163.com",
+		"date":"2016-10-12"
+	},
+	{
+		"productTypeID":2,
+		"productTypeName":"李四",
+		"email":"李四@163.com",
+		"date":"2016-10-13"
+	},
+	{
+		"productTypeID":3,
+		"productTypeName":"王五",
+		"email":"wangwu@163.com",
+		"date":"2016-10-11"
+	},
+	{
+		"productTypeID":4,
+		"productTypeName":"五王",
+		"email":"wangwu@163.com",
+		"date":"2016-10-11"
+	}
+]

@@ -1,0 +1,35 @@
+<table id="user_productType"></table>
+<div id="user_productType_manager_tool" style="padding:5px">
+	<div>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="user_productType_manager_tools.add();">添加</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="user_productType_manager_tools.remove();">删除</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="user_productType_manager_tools.update();">修改</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="user_productType_manager_tools.refresh();">刷新</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true"  onclick="user_productType_manager_tools.redo();">撤销选中</a>
+	</div>
+	<div style="padding:0 0 0 7px;color:#333">
+		查询账号：<input type="text" name="user" class="textbox" style="width:110px">
+		创建时间：<input type="text" name="date_from" class="easyui-datebox" editable="false" style="width:110px">
+		结束时间：<input type="text" name="date_to" class="easyui-datebox" editable="false" style="width:110px">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="user_productType_manager_tools.search();">查询</a>
+	</div>
+</div>
+
+<form id="user_productType_add" >
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">姓名:<input type="text" name="username" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">密码:<input type="text" name="password" class="textbox" value='123456' style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">邮箱:<input type="text" name="email" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">电话:<input type="text" name="phone" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p hidden style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">职位:<input type="text" name="workState" value='1' class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+</form>
+
+<form id="user_productType_update" >
+	 <p hidden style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">id:<input type="text" name="id_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">姓名:<input type="text" name="username_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p hidden style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">密码:<input type="text" name="password_update" class="textbox" value='123456' style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">邮箱:<input type="text" name="email_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">电话:<input type="text" name="phone_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 240px;height: 18px;line-height: 18px;margin:20px auto;">职位:<input type="text" name="workState_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	
+</form>
+<script type="text/javascript" src="HtcJs/user_productType.js"></script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>导出生成excel</title>
+    <meta name="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+  <div>
+  <form action="">
+  	<input type="hidden" name="type" value="Users" >
+  	<input type="hidden" id="admin_toExport_user_userName" name="userName">
+  	<input type="hidden" id="admin_toExport_user_hashedPassword" name="hashedPassword">
+  	<input type="submit" id="admin_toExport_user_submit" value="导出用户"  >
+  </form>
+  
+  
+  <form action="">
+  	<input type="hidden" name="type" value="AnalysisBatch" >
+  	<input type="hidden" id="admin_toExport_AnalysisBatch_userName" name="userName">
+  	<input type="hidden" id="admin_toExport_AnalysisBatch_hashedPassword" name="hashedPassword">
+  	<input type="submit" id="admin_toExport_AnalysisBatch_submit" value="导出批次统计" >
+  </form>
+  
+  <form action="">
+  	<input type="hidden" name="type" value="AnalysisProducer" >
+  	<input type="hidden" id="admin_toExport_AnalysisProducer_userName" name="userName">
+  	<input type="hidden" id="admin_toExport_AnalysisProducer_hashedPassword" name="hashedPassword">
+  	<input type="submit" id="admin_toExport_AnalysisProducer_submit" value="导出生产商统计" >
+  </form>
+  
+  <form action="">
+  	<input type="hidden" name="type" value="AnalysisType">
+  	<input type="hidden" id="admin_toExport_AnalysisType_userName" name="userName">
+  	<input type="hidden" id="admin_toExport_AnalysisType_hashedPassword" name="hashedPassword">
+  	<input type="submit" id="admin_toExport_AnalysisType_submit" value="导出产品类型统计" >
+  </form>
+  
+  <form action="">
+ 	 输入产品批次：<input id="admin_toExport_productBatch" type="text"  class="textbox" name="productBatch" />
+  	<input type="hidden" name="type" value="Products" >
+  	<input type="hidden" id="admin_toExport_Products_userName" name="userName">
+  	<input type="hidden" id="admin_toExport_Products_hashedPassword" name="hashedPassword">
+  	<input type="submit" id="admin_toExport_Products_submit" value="导出产品信息" >
+  </form>
+</div>
+<form action="">
+  	<input type="hidden" name="type" value="MACs" >
+  	<input type="hidden" id="admin_toExport_MAC_userName" name="userName">
+  	<input type="hidden" id="admin_toExport_MAC_hashedPassword" name="hashedPassword">
+  	 输入产品批次：<input type="text" id="admin_toExport_MAC_productBatch" name="productBatch">
+  	<input type="submit" id="admin_toExport_MAC_submit" value="导出MAC" >
+  </form>
+	<script type="text/javascript" src="HtcJs/admin_toExport.js"></script>
+	</body>
+</html>

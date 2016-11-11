@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+          xmlns:context="http://www.springframework.org/schema/context"  
+          xmlns:mongo="http://www.springframework.org/schema/data/mongo"  
+          xsi:schemaLocation="http://www.springframework.org/schema/context   
+          http://www.springframework.org/schema/context/spring-context-3.0.xsd   
+          http://www.springframework.org/schema/data/mongo   
+          http://www.springframework.org/schema/data/mongo/spring-mongo-1.0.xsd   
+          http://www.springframework.org/schema/beans   
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+      
+    <context:component-scan base-package="dao" />
+     
+      
+    <!-- <mongo:mongo host="127.0.0.1" port="27017"/> -->
+       
+       
+    <!-- 加载mongodb的属性配置文件 -->
+ 	<context:property-placeholder location="classpath*:config/mongodb.properties" />
+
+   	<!-- 定义mongo对象，对应的是mongodb官方jar包中的Mongo，replica-set设置集群副本的ip地址和端口 -->
+    <mongo:mongo id="mongo" replica-set="${mongo.hostport}">
+   		<!-- 一些连接属性的设置
+         <mongo:options
+             connections-per-host="8"
+             threads-allowed-to-block-for-connection-multiplier="4"
+             connect-timeout="12000"
+             max-wait-time="1500"
+             auto-connect-retry="true"
+             socket-keep-alive="true"
+             socket-timeout="1500"
+             slave-ok="true"
+             write-number="1"
+             write-timeout="0"
+             write-fsync="true"/> -->
+    </mongo:mongo>
+       
+
+    <!-- mongo的工厂，通过它来取得mongo实例,dbname为mongodb的数据库名，没有的话会自动创建 -->    
+    <mongo:db-factory dbname="pms" mongo-ref="mongo"/>    
+    
+    <!-- mongodb的主要操作对象，所有对mongodb的增删改查的操作都是通过它完成 -->    
+    <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">    
+      <constructor-arg name="mongoDbFactory" ref="mongoDbFactory"/>    
+    </bean>    
+    
+        
+    <!-- 映射转换器，扫描back-package目录下的文件，根据注释，把它们作为mongodb的一个collection的映射 -->    
+    <mongo:mapping-converter base-package="domain" />    
+        
+    
+    
+    <bean id="implentsDao" class="dao.basic.BasicImplentsDao" scope="prototype">
+    	<property name="mongoTemplate" ref="mongoTemplate" />
+    </bean>
+    
+    <bean id="analysisDao" class="dao.DataAnalysisDao" scope="prototype">
+    	<property name="mongoTemplate" >
+    		<ref bean="mongoTemplate"/>
+    	</property>
+    </bean>
+    
+    <bean id="productDataDao" class="dao.ProductDataDao" scope="prototype">
+    	<property name="mongoTemplate" ref="mongoTemplate" />
+    </bean> 
+    <bean id="userDao" class="dao.UserDao" scope="prototype">
+    	<property name="mongoTemplate" ref="mongoTemplate" />
+    </bean> 
+    <bean id="reportDao" class="dao.ReportDao" scope="prototype">
+    	<property name="mongoTemplate" ref="mongoTemplate" />
+    </bean> 
+    <bean id="productNoteDao" class="dao.ProductNoteDao" scope="prototype">
+    	<property name="mongoTemplate" ref="mongoTemplate" />
+    </bean>
+    <bean id="productDao" class="dao.ProductDao" scope="prototype">
+    	<property name="mongoTemplate" ref="mongoTemplate" />
+    </bean> 
+    <bean id="macDao" class="dao.MacDao" scope="prototype">
+    	<property name="mongoTemplate" ref="mongoTemplate" />
+    </bean> 
+   	
+       
+</beans>

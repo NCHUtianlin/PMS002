@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>管理员_所有申报界面</title>
+</head>
+<body>
+<table id="admin_allApply"></table>
+<div id="admin_allApply_manager_tool" style="padding:5px">
+	<div>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="admin_allApply_manager_tools.add();">添加</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="admin_allApply_manager_tools.update();">修改</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-reload" plain="true" onclick="admin_allApply_manager_tools.refresh();">刷新</a>
+		<a href="#" class="easyui-linkbutton" iconCls="icon-redo" plain="true"  onclick="admin_allApply_manager_tools.redo();">撤销选中</a>
+	</div>
+	<div style="padding:0 0 0 7px;color:#333">
+		
+		开始时间：<input  id="admin_allApply_date_from" name="admin_allApply_date_from" class="easyui-datebox"  style="width:110px">
+		结束时间：<input  id="admin_allApply_date_to" name="admin_allApply_date_to" class="easyui-datebox"  style="width:110px">
+        <input type="text" id="admin_allApply_search" name="admin_allApply_search" class="textbox" style="width:150px">
+		<a href="#" class="easyui-linkbutton" iconCls="icon-search" plain="true" onclick="admin_allApply_manager_tools.search();">查询</a>
+	</div>
+</div>
+
+<form id="admin_allApply_apply_add" >
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">产品类型:<input type="text" id="admin_allApply_productTypeID_add"   name="admin_allApply_productTypeID_add"  style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产数量:<input type="text" id="admin_allApply_reportQuantity_add"  name="admin_allApply_reportQuantity_add" class="textbox"  style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">开始日期:<input type="text" id="admin_allApply_reportStartDate_add" name="admin_allApply_reportStartDate_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">结束时间:<input type="text" id="admin_allApply_reportEndDate_add"   name="admin_allApply_reportEndDate_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">完成率：  <input type="text" id="admin_allApply_reportCompleteRate_add" name="admin_allApply_reportCompleteRate_add" value="100%"  class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产商:  <input type="text" id="admin_allApply_producer_add" name="admin_allApply_producer_add" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+</form>
+
+<form id="admin_allApply_apply_update" >
+	 <input type="hidden" id="admin_allApply_reportID_update"  name="admin_allApply_reportID_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">产品类型:<input type="text"   id="admin_allApply_productTypeID_update"  name="admin_allApply_productTypeID_update" class="textbox"  style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产数量:<input type="text"   id="admin_allApply_reportQuantity_update"  name="admin_allApply_reportQuantity_update" class="textbox"  style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:30px auto;">开始时间:<input type="text"   id="admin_allApply_reportStartDate_update"  name="admin_allApply_reportStartDate_update" class="textbox" style="height:28px;line-height: 28px;margin-left:10px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">完成时间:<input type="text"   id="admin_allApply_reportEndDate_update"  name="admin_allApply_reportEndDate_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+	 <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">完成率:  <input type="text"   id="admin_allApply_reportCompleteRate_update"  name="admin_allApply_reportCompleteRate_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">生产商:  <input type="text"   id="admin_allApply_producer_update"  name="admin_allApply_producer_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+     <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">审核结果:<select id="admin_allApply_checkResult_update"   name="admin_allApply_checkResult_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;">
+    	<option value="0">拒绝</option>
+    	<option value="1">通过</option>
+    	<option value="2">未审核</option>
+    </select>
+    </p>
+    <p style="font-size: 18px;width: 340px;height: 18px;line-height: 18px;margin:20px auto;">审核说明:<input type="text" id="admin_allApply_checkExplain_update" name="admin_allApply_checkExplain_update" class="textbox" style="height:28px;line-height: 28px;margin: 10px 5px;"/></p>
+</form>
+<script type="text/javascript" src="HtcJs/admin_allApply.js"></script>
+</body>
+</html>

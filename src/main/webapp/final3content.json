@@ -1,0 +1,26 @@
+[
+    {
+        "userID": "1",
+        "name": "张三",
+        "email": "zhangsan@163.com",
+        "phone": "123456",
+        "authority": "1",
+        "workState": "1"
+    },
+    {
+        "userID": "2",
+        "name": "李四",
+        "email": "lisi@163.com",
+        "phone": "5528824",
+        "authority": "1",
+        "workState": "1"
+    },
+    {
+        "userID": "3",
+        "name": "王五",
+        "email": "wangwu@163.com",
+        "phone": "12354",
+        "authority": "0",
+        "workState": "1"
+    }
+]
